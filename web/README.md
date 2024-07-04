@@ -36,3 +36,32 @@
 8. **NaN**(Not A Number)
 > 연산 과정에서 잘못된 입력을 받았음을 나타내는 기호이다.
 <br />
+
+9. **JsDoc**
+> 모듈, 네임스페이스, 클래스, 메소드, 매개변수 등에 대한 API 문서 생성 도구이다.
+<br />
+
+10. **propTypes**
+> 리액트에서 컴포넌트 props의 타입을 검사하기 위해 사용하는 속성이다.
+<br />
+
+11. **슈퍼셋**(Superset)
+> 기존 언어에 새로운 기능과 문법을 추가해서 보완하거나 향상하는 것을 말한다. 슈퍼셋 언어는 기존 언어와 호환되며, 일반적으로 컴파일러 등으로 기존 언어 코드로 변환되어 실행된다.
+>
+> 슈퍼셋 언어 e.g., `TypeScript`
+<br />
+
+12. ECMAScript 표준을 따르는 **JavaScript의 7가지 데이터 타입**
+> ## Primitive Types
+> 1. undefined
+> 2. null
+> 3. Boolean
+> 4. String
+> 5. Symbol
+> 6. Numeric(Number와 BigInt)
+> ## Object Type
+> 7. Object
+<br />
+
+13. **암묵적 타입 변환**(Implicit coercion conversion)
+> 개발자가 의도적으로 타입을 명시하거나 바꾸지 않았는데도 컴파일러 또는 엔진 등에 의해서 런타임에 타입이 자동으로 변경되는 것을 말한다.
