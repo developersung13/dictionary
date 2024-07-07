@@ -85,6 +85,7 @@
 
 18. **IIFE**(Immediately Invoked Function Expression, 즉시 실행 함수)
 ```javascript
+// e.g.
 (function(name) {
     console.log('Hello, ' + name + '!')
 })("World");
