@@ -182,3 +182,80 @@
 > // doubled = [2, 4, 6]
 > ```
 > - `forEach 함수`와 `map 함수`의 가장 큰 차이점은 `map 함수`는 새로운 배열을 반환한다는 것입니다. 결과가 필요하며, 원본 배열은 변경하고 싶지 않다면 `map 함수`를 선택해야 하고, 단순히 배열을 반복하고자 한다면 `forEach 함수`가 좋은 선택입니다.
+<br />
+
+25. **익명 함수의 사용사례**
+> - 익명함수는 IIFE로 사용되어 지역 범위 내에서 일부 코드를 캡술화하므로 선언된 변수가 전역 범위로 누출되지 않도록 합니다.
+> ```javascript
+> (function() {
+>   ...
+> })()
+> ```
+>
+> - 한 번 사용되고 다른 곳에서는 사용할 필요가 없는 콜백으로 사용됩니다. 함수 본체를 찾기 위해 다른 곳을 찾아볼 필요 없이 코드를 호출하는 코드 바로 안에 핸들러가 정의되어 있으면 코드가 보다 독립적이고 읽기 쉽게 보입니다.
+> ```javascript
+> setTimeout(function() {
+>   console.log('Hello World!');
+> }, 1000);
+> ```
+>
+> - 함수형 프로그래밍 또는 `Lodash`에 대한 인수(콜백과 유사)로 사용됩니다.
+> ```javascript
+> const arr = [1, 2, 3];
+> const double = arr.map(function(element) {
+>   return element * 2;
+> });
+> 
+> console.log(double);
+> ```
+
+26. **Lodas**
+> 배열, 숫자, 객체, 문자열 등의 데이터로 작업할 때 번거로움을 없애고 쉽게 다룰 수 있도록 하는 JavaScript의 인기 라이브러리 중 하나로 `debounce` 및 `throttle`을 간편하게 구현할 수 있도록 도와준다.
+> ```javascript
+> var myFriend = [
+>  { name: 'kys', job: 'developer', age: 27 },
+>  { name: 'cys', job: 'webtoons man', age: 27 },
+>  { name: 'yhs', job: 'florist', age: 26 },
+>  { name: 'chj', job: 'nonghyup man', age: 27 },
+>  { name: 'ghh', job: 'coffee man', age: 27 },
+>  { name: 'ldh', job: 'kangaroo father', age: 27 },
+>  { name: 'hsy', job: 'monk', age: 27 },
+> ];
+> 
+> // 콜백함수를 통해 나이가 26인 객체가 처음으로 나오는 index 반환
+> _.findIndex(myFriend, function(friend) {
+>   return friend.age === 26;
+> });
+> // -> 2
+> ```
+
+27. **debounce 와 Throttle**
+> ## Debounce
+> Debounce는 이벤트가 계속해서 발생할 때, 마지막 이벤트가 발생하고 일정 시간이 지난 후에만 특정 작업을 수행합니다. 예를 들어, 사용자가 입력 필드에 타이핑할 때마다 API 요청을 보내고 싶지 않고 사용자가 입력을 멈춘 후에만 요청을 보내고 싶을 때 주로 사용됩니다.
+> - **동작 방식** : 이벤트가 발생할 때마다 타이머를 리셋하고, 타이머가 끝날 때 작업을 수행합니다.
+> - **사용 예시** : 검색 입력, 창 크기 조정 시 작업
+>
+> ## Throttle
+> Throttle은 일정한 간격으로 이벤트를 처리하는 방법입니다. 이벤트가 계속해서 발생하더라도 지정된 시간 간격으로만 특정 작업을 수행합니다. 예를 들어, 스크롤 이벤트에서 일정 시간 간격으로만 작업을 수행하여 성능을 향상시킬 때 주로 사용됩니다.
+> - **동작 방식** : 최초 이벤트가 발생한 후 일정 시간이 지나기 전에는 추가 이벤트(들)을 무시합니다.
+> - **사용 예시** : 스크롤, 리사이즈 이벤트 핸들링
+
+28. **MVC 패턴**
+> MVC 패턴은 소프트웨어 디자인 패턴 중 하나로, 애플리케이션을 세 가지 주요 컴포넌트로 나누어 설계합니다. 이는 코드의 재사용성과 유지 보수성을 향상시키기 위한 목적으로 사용됩니다.
+> 1. **Model** : 애플리케이션의 데이터와 그 데이터를 처리하는 비즈니스 로직을 담당합니다. 데이터베이스와의 상호작용, 데이터 검증 등을 포함합니다.
+> 2. **View** : 사용자에게 데이터를 표시하는 부분입니다. 사용자 인터페이스(UI) 요소를 관리하며, 모델로부터 데이터를 받아와 사용자에게 보여줍니다.
+> 3. **Controller** : 사용자 입력(요청)을 처리하고, 이를 모델과 뷰에 전달합니다. 컨트롤러는 모델의 상태를 변경하거나 뷰를 업데이트하는 로직을 포함합니다.
+>
+> <img width="1282" alt="Screenshot 2024-07-10 at 1 58 05 AM" src="https://github.com/developersung13/dictionary/assets/56868605/3a02867f-a458-4673-bb31-341b00ee5802">
+> <img width="846" alt="Screenshot 2024-07-10 at 1 57 38 AM" src="https://github.com/developersung13/dictionary/assets/56868605/b224f11f-09f3-4a46-8b52-4d974261a00c">
+
+29. **FLUX 패턴**
+> Flux 패턴은 Facebook이 개발한 애플리케이션 아키텍처 패턴으로, 주로 Client Side 웹 애플리케이션에서 단방향 데이터 흐름을 구현하는 방법을 정의합니다.
+>
+> ## 구성요소
+> 1. **Action** : 애플리케이션 내에서 발생하는 이벤트나 사용자 인터랙션을 나타냅니다.
+> 2. **Dispatcher** : 모든 액션을 수신하고, 이를 스토어에 전달하는 중앙 허브 역할을 합니다.
+> 3. **Store** : 애플리케이션의 상태와 비즈니스 로직을 포함하며, 상태 변경 시 뷰에 변경 사항을 통지합니다.
+> 4. **View** : 사용자 인터페이스를 담당하며, 상태 변경에 따라 화면을 업데이트합니다.
+>
+> ![1_6gzKauaLur48CJh-iwEFAQ](https://github.com/developersung13/dictionary/assets/56868605/5405bf07-504f-41a5-95b8-e0b1f3689a5f)
