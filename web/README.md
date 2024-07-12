@@ -308,3 +308,10 @@
 > console.log(add.call(null, 1, 2)); // 3
 > console.log(add.apply(null, [1, 2])); // 3
 > ```
+<br />
+
+32. **HMR**(Hot Module Replacement | Reloading)
+> 모듈(코드) 전체를 다시 로드하지 않고 변경사항을 런타임에 교체하는 편의 기능이다.
+
+33. **Funnel**
+> 사용자에게 복잡한 값을 입력받을 때, 여러 화면이나 단계로 쪼개어서 입력받는 흐름
