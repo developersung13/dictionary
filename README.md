@@ -1,4 +1,4 @@
-# dictionary &middot; [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/developersung13/bad-word-detection/blob/main/LICENSE)
+# dictionary &middot; [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/developersung13/dictionary/blob/main/LICENSE)
 
 
 A repository containing a comprehensive collection of software and web development terms and concepts.
